@@ -1,9 +1,9 @@
 # sp25-spring-security-jpa-demo
 ## This should be the last thing that you add to your project, after everything else is working.
 ## Notes:
-- When you install, make sure to import the database file `publisher.sql`
+- When you install, make sure to import the database file `mvc2-database.sql`
 - Use one of the populated user accounts to login.
-- The password is `password` for each of them.
+- The password is `123` for each of them. Very secure.
 - This repository includes a dependency to [Spring Security](https://github.com/uncg-csc340/sp25-spring-security-jpa-demo/blob/22658d2fc91cd0afa996568af80709c6fec0eb67/pom.xml#L41). This is how it handles authentication and authorization.
      - When you start at Spring Initializr and add a dependency to Spring Security, this will also add a ThymeLeaf dependency for Security as well.
      - The rest of the dependencies should already look familiar: Spring Web, FreeMarker, JPA, MySQL.
