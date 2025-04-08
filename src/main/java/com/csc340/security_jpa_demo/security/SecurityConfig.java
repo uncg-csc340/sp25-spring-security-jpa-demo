@@ -38,10 +38,10 @@ public class SecurityConfig {
                         .dispatcherTypeMatchers(DispatcherType.FORWARD,
                                 DispatcherType.ERROR).permitAll()
                         .requestMatchers("/home").permitAll()
-                           .requestMatchers("/students/createForm", "/students/new","/students/delete/**").hasAuthority("ADMIN")
+                          .requestMatchers("/students/createForm", "/students/new","/students/delete/**").hasAuthority("ADMIN")
                            .requestMatchers("/projects/new", "/projects/delete/**", "/projects/update**").hasAuthority("TEAM_LEAD")
                             .requestMatchers("/teams/new", "/teams/delete/**", "/teams/update**").hasAuthority("MOD")
-                        .anyRequest().permitAll()
+                        .anyRequest().authenticated()
                 )
                 .formLogin(withDefaults())
                 .exceptionHandling((x) -> x.accessDeniedPage("/403"))
